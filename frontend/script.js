@@ -1,6 +1,9 @@
+// URL de l'API en ligne
+const API_URL = "https://compteur-electro.onrender.com";
+
 // Mettre à jour le compteur depuis le backend
 async function updateCompteur() {
-  const res = await fetch('http://localhost:3000/compteur');
+  const res = await fetch(`${API_URL}/compteur`);
   const data = await res.json();
   document.getElementById("compteur-value").innerText = data.total;
   document.getElementById("last-update").innerText = new Date().toLocaleString();
@@ -8,7 +11,7 @@ async function updateCompteur() {
 
 // Acheter du kWh (envoie au serveur)
 async function acheterKwh(kwh, prix) {
-  const res = await fetch('http://localhost:3000/recharger', {
+  const res = await fetch(`${API_URL}/recharger`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ kwh, prix })
@@ -20,7 +23,7 @@ async function acheterKwh(kwh, prix) {
 
 // Charger l’historique depuis le serveur
 async function chargerHistorique() {
-  const res = await fetch('http://localhost:3000/historique');
+  const res = await fetch(`${API_URL}/historique`);
   const historique = await res.json();
   let tbody = document.getElementById("historique-list");
   if (!tbody) return;
@@ -45,3 +48,4 @@ window.onload = () => {
     chargerHistorique();
   }
 };
+
