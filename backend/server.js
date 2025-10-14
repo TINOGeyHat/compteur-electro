@@ -4,10 +4,12 @@ const db = require('./db');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://compteur-front.onrender.com" // ← mets ici l’URL exacte de ton frontend Render
+}));
 app.use(express.json());
 
 // POST /recharger : ajouter une recharge
@@ -44,5 +46,5 @@ app.delete('/reset', (req, res) => {
 
 // Lancer le serveur
 app.listen(PORT, () => {
-  console.log(`✅ Serveur en ligne sur http://localhost:${PORT}`);
+  console.log(`✅ Serveur en ligne sur le port ${PORT}`);
 });
