@@ -6,10 +6,16 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
+// ✅ Middleware CORS — autorise ton site GitHub Pages à accéder au backend Render
 app.use(cors({
-  origin: "https://tinogeyhat.github.io/compteur-electro" // ← ici l’URL exacte de ton frontend github
+  origin: [
+    "https://tinogeyhat.github.io",               // domaine GitHub Pages
+    "https://tinogeyhat.github.io/compteur-electro" // sous-chemin du projet
+  ],
+  methods: ["GET", "POST", "DELETE"],
+  allowedHeaders: ["Content-Type"]
 }));
+
 app.use(express.json());
 
 // POST /recharger : ajouter une recharge
