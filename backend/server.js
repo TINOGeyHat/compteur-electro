@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-  origin: "https://compteur-front.onrender.com" // ← mets ici l’URL exacte de ton frontend Render
+  origin: "https://tinogeyhat.github.io/compteur-electro" // ← ici l’URL exacte de ton frontend github
 }));
 app.use(express.json());
 
