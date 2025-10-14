@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historique des recharges</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <h1>⚡ Compteur Électrique</h1>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="recharge.html">Recharge</a></li>
+      <li><a href="historique.html" class="active">Historique</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2>Historique des recharges</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>KWh</th>
+            <th>Montant (F)</th>
+          </tr>
+        </thead>
+        <tbody id="historique-list">
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
