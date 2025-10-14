@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compteur Électrique - Accueil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <h1>⚡ Compteur Électrique</h1>
+    <ul>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="recharge.html">Recharge</a></li>
+      <li><a href="historique.html">Historique</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2>Compteur Virtuel</h2>
+      <div class="compteur-display">
+        <span id="compteur-value">0</span> kWh
+      </div>
+      <p>Dernière mise à jour : <span id="last-update">--</span></p>
+      <button onclick="updateCompteur()">🔄 Actualiser</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

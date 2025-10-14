@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recharge kWh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <h1>⚡ Compteur Électrique</h1>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="recharge.html" class="active">Recharge</a></li>
+      <li><a href="historique.html">Historique</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2>Recharger votre compteur</h2>
+      <div class="recharge-options">
+        <button onclick="acheterKwh(1, 500)">1 kWh = 500F</button>
+        <button onclick="acheterKwh(5, 2500)">5 kWh = 2500F</button>
+        <button onclick="acheterKwh(10, 5000)">10 kWh = 5000F</button>
+        <button onclick="acheterKwh(20, 10000)">20 kWh = 10000F</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
