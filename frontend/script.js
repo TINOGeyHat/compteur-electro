@@ -1,5 +1,5 @@
 // URL de l'API en ligne
-const API_URL = "https://compteur-electro.onrender.com";
+const API_URL = "https://backend.onrender.com";
 
 // Mettre à jour le compteur depuis le backend
 async function updateCompteur() {
