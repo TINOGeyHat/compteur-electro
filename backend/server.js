@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ✅ Middleware CORS — autorise ton site GitHub Pages à accéder au backend Render
+// Middleware CORS — autorise ton site GitHub Pages à accéder au backend Render
 app.use(cors({
   origin: [
     "https://tinogeyhat.github.io",               // domaine GitHub Pages
